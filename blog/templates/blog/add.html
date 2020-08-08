@@ -1,0 +1,17 @@
+{% extends 'blog/base.html'%}
+{% load static %}
+{% block content%}
+
+<div class="col-sm-10">
+    <h3 class="text-white my-5">Create My Memory</h3>
+    <form method="POST" action={% url 'add' %}>
+        {% csrf_token %}
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Write</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="data"></textarea><br>
+     <input class="btn btn-primary" type="submit" value="Submit">
+      <a href="{% url 'dashboard' %}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">return Dashboard</a>
+  </div>
+</form>
+</div>
+{% endblock content%}

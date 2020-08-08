@@ -1,0 +1,23 @@
+{% extends 'blog/base.html'%}
+{% load static %}
+{% block content%}
+
+<div class="col-sm-10">
+    <h1 class="text-white my-5"><center>SHOW DATA</center></h1>
+    <table style="width:100%">
+    <tr>
+    <th>USER</th>
+    <th>PHONE NUMBER</th>
+    <th>AGE</th>
+  </tr>
+    {% for d in data %}
+    <tr>
+    <td>{{ d.user}}</td>
+    <td>{{d.phone_num}}</td>
+    <td>{{d.age}}</td>
+  </tr>
+    {% endfor %}
+    </table>
+    
+</div>
+{% endblock content%}
